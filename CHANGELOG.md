@@ -1,3 +1,4 @@
-## 0.0.1
+## 0.1.0
 
-* TODO: Describe initial release.
+* Initial release of the realtime_image_labeler widget.
+* Includes camera preview, SSD MobileNet detection, bounding boxes, and picture capture functionality.

@@ -1,7 +1,10 @@
 name: realtime_image_labeler
-description: "A new Flutter package to label images in real time."
-version: 0.0.1
-homepage:
+description: "A Flutter widget for real-time object detection using the camera and SSD MobileNet."
+version: 0.1.0
+homepage: https://github.com/Estudio-Tarzia/realtime_image_labeler
+repository: https://github.com/Estudio-Tarzia/realtime_image_labeler
+license: MIT
+
 
 environment:
   sdk: ^3.6.2
