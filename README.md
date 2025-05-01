@@ -145,6 +145,8 @@ class Recognition {
 
 Use code with caution.
 
+```
+
 DetectorWidget Parameters
 onResult (required, Function(List<Recognition>)): Callback invoked frequently with the list of detected objects. Each Recognition object provides details like label, confidence score, and location.
 onTakePicture (optional, Function(XFile)?): Callback invoked when the user taps the capture button. Returns an XFile object (from the camera package). If this is null, the camera button will not be shown by default.
@@ -153,15 +155,22 @@ backgroundColor (optional, Color): Background color of the capture button circle
 foregroundColor (optional, Color): Color of the icon on the capture button. Defaults to Colors.black.
 iconSize (optional, double): Size of the capture button icon. Defaults to 100.0.
 showCameraButton (optional, bool): Explicitly controls the visibility of the camera button. Defaults to true if onTakePicture is provided, otherwise false. If set to true but onTakePicture is null, the button will appear but do nothing when tapped.
-Model Used
+
+```
+
+## Model Used
 This package uses a pre-trained SSD MobileNet v1 model (ssd_mobilenet.tflite) and corresponding labels (labelmap.txt) bundled as assets to perform object detection. These assets are included within the package.
-IMPORTANT: The included model and labels are typically derived from the TensorFlow Object Detection API and often distributed under the Apache License 2.0. Please verify the specific license terms applicable to the model files you have bundled if they differ from the standard TensorFlow examples. Ensure compliance when using or distributing this package.
-Acknowledgement
+
+## IMPORTANT: 
+The included model and labels are typically derived from the TensorFlow Object Detection API and often distributed under the Apache License 2.0. Please verify the specific license terms applicable to the model files you have bundled if they differ from the standard TensorFlow examples. Ensure compliance when using or distributing this package.
+
+## Acknowledgement
 The core detection logic and widget structure are inspired by and adapt concepts from the official TensorFlow Lite Flutter example:
 https://github.com/tensorflow/flutter-tflite/blob/main/example/live_object_detection_ssd_mobilenet
-Additional Information
-Find the source code on GitHub. <!-- UPDATE LINK -->
-Report issues on the issue tracker. <!-- UPDATE LINK -->
+
+## Additional Information
+Find the source code on GitHub. 
+
 Contributions are welcome!
 License
 This package is licensed under the MIT License.
