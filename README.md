@@ -11,7 +11,7 @@ A Flutter widget that provides a live camera preview for real-time object detect
 
 
 *Example:*
-`![Widget Preview](images/detector.gif)`
+![Widget Preview](images/detector.gif)
 
 
 ## Features
