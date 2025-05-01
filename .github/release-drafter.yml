@@ -1,0 +1,52 @@
+# .github/release-drafter.yml
+name-template: 'v$RESOLVED_VERSION'  # Formato do nome da release (ex: v1.2.3)
+tag-template: 'v$RESOLVED_VERSION'   # Formato da tag Git (ex: v1.2.3)
+categories:
+  - title: '🚀 Features'
+    labels:
+      - 'feat'      # Commits com "feat:" no título
+      - 'feature'   # Labels "feature" nos PRs
+      - 'enhancement' # Labels "enhancement" nos PRs
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'fix'       # Commits com "fix:" no título
+      - 'bug'       # Labels "bug" nos PRs
+  - title: '🧰 Maintenance'
+    labels:
+      - 'chore'     # Commits com "chore:" no título
+      - 'refactor'  # Refatorações
+      - 'style'     # Mudanças de estilo
+      - 'test'      # Testes
+  - title: '📚 Documentation'  # Adicionado para consistência
+    labels:
+      - 'docs'      # Documentação
+      - 'documentation'
+  - title: '⚙️ Dependencies' # Adicionado para atualizações de dependências
+    labels:
+      - 'dependencies'
+      - 'dependabot'  # Se você usar o Dependabot
+  - title: '⚠️ Breaking Changes'
+    label: 'breaking-change'
+    collapse-after: 1
+change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
+change-title-escapes: '\<*_&'
+version-resolver:
+  major:
+    labels:
+      - 'breaking-change'
+  minor:
+    labels:
+      - 'feat'
+      - 'feature'
+      - 'enhancement'
+  patch:
+    labels:
+      - '*'  # Qualquer outra label
+template: |
+  ## Changes
+
+  $CHANGES
+
+  ## Agradecimentos
+
+  Agradecimentos especiais a todos os contribuidores! 💖
