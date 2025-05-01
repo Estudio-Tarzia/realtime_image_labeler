@@ -5,20 +5,17 @@
 
 A Flutter widget that provides a live camera preview for real-time object detection using a built-in SSD MobileNet TFLite model. It displays bounding boxes with labels and confidence scores for detected objects and offers a simple interface for integration.
 
-**(View Portuguese Version [README_pt-BR.md](README_pt-BR.md))**
+
 
 ## Preview
 
-**(ADD A SCREENSHOT OR GIF HERE!)**
 
 *Example:*
-`![Widget Preview](preview.gif)`
+`![Widget Preview](images/detector.gif)`
 
-*A GIF demonstrating real-time detection is highly recommended.*
 
 ## Features
 
-*   Displays a full-screen live camera preview.
 *   Performs real-time object detection using the included SSD MobileNet TFLite model.
 *   Draws bounding boxes and labels around detected objects.
 *   Provides detection results via the `onResult` callback (includes label, confidence, location).
@@ -174,3 +171,20 @@ Find the source code on GitHub.
 Contributions are welcome!
 License
 This package is licensed under the MIT License.
+
+
+# ptBR
+
+Um widget Flutter que fornece uma visualização de câmera ao vivo para detecção de objetos em tempo real usando um modelo SSD MobileNet TFLite embutido. Ele exibe caixas delimitadoras com rótulos e pontuações de confiança para objetos detectados e oferece uma interface simples para integração.
+
+## Funcionalidades
+
+*   Realiza detecção de objetos em tempo real usando o modelo SSD MobileNet TFLite incluído.
+*   Desenha caixas delimitadoras (bounding boxes) e rótulos ao redor dos objetos detectados.
+*   Fornece resultados da detecção através do callback `onResult` (inclui rótulo, confiança, localização).
+*   Opcionalmente, inclui um botão personalizável para capturar fotos (callback `onTakePicture`).
+*   Gerencia internamente a inicialização da câmera e o ciclo de vida.
+
+
+
+
