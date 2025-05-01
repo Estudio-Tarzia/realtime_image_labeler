@@ -13,8 +13,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  tflite_flutter: 0.11.0
-  exif: 3.1.4
+  tflite_flutter: ^0.11.0
+  exif: ^3.1.4
   camera: ^0.11.1
   camera_android: ^0.10.10
   image: ^4.5.3
