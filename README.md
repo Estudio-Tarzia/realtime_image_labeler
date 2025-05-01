@@ -10,7 +10,6 @@ A Flutter widget that provides a live camera preview for real-time object detect
 ## Preview
 
 
-*Example:*
 ![Widget Preview](images/detector.gif)
 
 
@@ -28,6 +27,7 @@ A Flutter widget that provides a live camera preview for real-time object detect
     ```yaml
     dependencies:
       realtime_image_labeler: ^0.0.1 # Replace with the latest published version
+      camera_android: ^0.10.10
     ```
 
 2.  **Install:** Run `flutter pub get` in your terminal.
@@ -69,6 +69,8 @@ import 'package:camera/camera.dart'; // Required for XFile
 
 class DetectionScreen extends StatelessWidget {
   const DetectionScreen({Key? key}) : super(key: key);
+
+  ScreenParams.screenSize = MediaQuery.of(context).size; // --> Important!
 
   @override
   Widget build(BuildContext context) {
@@ -158,18 +160,17 @@ showCameraButton (optional, bool): Explicitly controls the visibility of the cam
 ## Model Used
 This package uses a pre-trained SSD MobileNet v1 model (ssd_mobilenet.tflite) and corresponding labels (labelmap.txt) bundled as assets to perform object detection. These assets are included within the package.
 
-## IMPORTANT: 
-The included model and labels are typically derived from the TensorFlow Object Detection API and often distributed under the Apache License 2.0. Please verify the specific license terms applicable to the model files you have bundled if they differ from the standard TensorFlow examples. Ensure compliance when using or distributing this package.
 
 ## Acknowledgement
 The core detection logic and widget structure are inspired by and adapt concepts from the official TensorFlow Lite Flutter example:
+
 https://github.com/tensorflow/flutter-tflite/blob/main/example/live_object_detection_ssd_mobilenet
 
 ## Additional Information
-Find the source code on GitHub. 
 
 Contributions are welcome!
-License
+
+## License
 This package is licensed under the MIT License.
 
 
