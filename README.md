@@ -47,18 +47,24 @@ Add the following permission *before* the `<application>` tag:
 <!-- Optional, but recommended -->
 <uses-feature android:name="android.hardware.camera" android:required="false" />
 <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+```
+
 Use code with caution.
-Markdown
-iOS (ios/Runner/Info.plist)
+
+**iOS** (`Runner/Info.plist`)
+
 Add the following key-string pair inside the main <dict> tag:
+```xml
 <key>NSCameraUsageDescription</key>
 <string>This app needs camera access to perform live object detection.</string>
+```
 Use code with caution.
-Xml
-(Remember to provide a clear usage description for your users).
+
 Note: While this widget handles camera initialization, you might still want to request camera permission before navigating to the screen containing DetectorWidget, using a package like permission_handler for a smoother user experience.
 Basic Usage
 Import the package and integrate DetectorWidget into your screen.
+
+```dart
 import 'package:flutter/material.dart';
 import 'package:realtime_image_labeler/realtime_image_labeler.dart'; // Import the package
 import 'dart:io'; // Required for File operations if using onTakePicture
@@ -135,8 +141,10 @@ class Recognition {
   Recognition(this.id, this.label, this.score, this.location);
 }
 */
+```
+
 Use code with caution.
-Dart
+
 DetectorWidget Parameters
 onResult (required, Function(List<Recognition>)): Callback invoked frequently with the list of detected objects. Each Recognition object provides details like label, confidence score, and location.
 onTakePicture (optional, Function(XFile)?): Callback invoked when the user taps the capture button. Returns an XFile object (from the camera package). If this is null, the camera button will not be shown by default.
