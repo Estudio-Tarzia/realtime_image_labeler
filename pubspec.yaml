@@ -1,0 +1,28 @@
+name: realtime_image_labeler
+description: "A new Flutter package to label images in real time."
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ^3.6.2
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  tflite_flutter: 0.11.0
+  exif: 3.1.4
+  camera: ^0.11.1
+  camera_android: ^0.10.10
+  image: ^4.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  
+flutter: 
+  assets:
+    - assets/
+    
+      

@@ -1,0 +1,28 @@
+name: example
+description: "A new Flutter project to label images in real time ."
+publish_to: 'none' 
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  camera: ^0.11.1
+  camera_android: ^0.10.10
+  realtime_image_labeler:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+
+flutter:
+  uses-material-design: true
